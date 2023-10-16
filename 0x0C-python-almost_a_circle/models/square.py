@@ -79,6 +79,13 @@ class Square(Rectangle):
             "y": self.y
         }
 
+    def display(self):
+        """Print the square with '#' characters."""
+        for _ in range(self.y):
+            print()
+        for _ in range(self.height):
+            print(" " * self.x + "#" * self.width)
+
     def __str__(self):
         """Return the print() and str() rep of a Sq."""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
